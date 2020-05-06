@@ -9,7 +9,6 @@ setup(
     version=__version__,  # pylint: disable=undefined-variable
     author="Fastly",
     author_email="support@fastly.com",
-    description="Fastly python API",
     classifiers=[
         "Operating System :: OS Independent",
         "Programming Language :: Python",
@@ -31,5 +30,5 @@ setup(
         "bin/purge_url",
         "bin/fastly"
     ],
-    url="https://github.com/fastly/fastly-py",
+    url="https://github.com/marklkelly/fastly-py",
 )
