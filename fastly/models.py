@@ -196,6 +196,10 @@ class User(Model):
     COLLECTION_PATTERN = '/user/$id'
     INSTANCE_PATTERN = COLLECTION_PATTERN + '/$id'
 
+class ResponseObject(Model):
+    COLLECTION_PATTERN = Version.COLLECTION_PATTERN + '/$version/response_object'
+    INSTANCE_PATTERN = COLLECTION_PATTERN + '/$name'
+
 class Settings(Model):
     INSTANCE_PATTERN = Version.COLLECTION_PATTERN + '/$version/settings'
     COLLECTION_PATTERN = INSTANCE_PATTERN

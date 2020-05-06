@@ -9,8 +9,8 @@ from fastly.errors import AuthenticationError
 from fastly.models import (
     Service, Version, Domain, Backend,
     Settings, Condition, Header, VCL,
-    Dictionary, DictionaryItem
-)
+    Dictionary, DictionaryItem,
+    ResponseObject)
 
 
 class API(object):
@@ -59,6 +59,9 @@ class API(object):
 
     def condition(self, service_id, version, name):
         return Condition.find(self.conn, service_id=service_id, version=version, name=name)
+
+    def response_object(self, service_id, version, name):
+        return ResponseObject.find(self.conn, service_id=service_id, version=version, name=name)
 
     def header(self, service_id, version, name):
         return Header.find(self.conn, service_id=service_id, version=version, name=name)
